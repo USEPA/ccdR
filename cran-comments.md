@@ -4,6 +4,7 @@
 
 * local Windows 10 install, R 4.4.0
 * Mac mini, Apple M1, macOS Ventura 13.3.1 (22E261), R version 4.4.0 (2024-04-24)
+* R Under development (unstable) (2024-07-03 r86870 ucrt), Windows Server 2022 x64 (build 20348)
 
 * Rhub/actions Windows 2022 x64 (build 20348), R-devel (2024-07-03 r86870)
 * Rhub/actions Ubuntu 22.04.4 LTS, clang-asan, R-devel (2024-07-03 r86873)
@@ -31,11 +32,10 @@ Status: OK
 
 ## win devel check results
 
-1 NOTE - CRAN incoming feasibility
-Indicated possibly misspelled words in DESCRIPTION (APIs, CompTox, bioactivity). These are all correctly spelled.
-
+Status: OK
 
 ## local R CMD check results
 
 0 errors | 0 warnings | 0 note
 
+* This is the final release of ccdR. Users will be notified that this package will no longer be actively maintained. ctxR will pick up development and be actively maintained moving forward and ccdR users will be directed to ctxR.
