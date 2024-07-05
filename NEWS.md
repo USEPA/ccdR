@@ -7,7 +7,7 @@
 ## New features
 
 * New `get_bioactivity_endpoint_status()` and `get_hazard_endpoint_status()` 
-retrieve Bioactivity and Hazard endpoint statuses, resepctively (#61).
+retrieve Bioactivity and Hazard endpoint statuses, respectively (#61).
 
 * New `get_chemical_endpoint_status()` provides Chemical API status (#49).
 
