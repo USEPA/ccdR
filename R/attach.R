@@ -17,7 +17,7 @@
   msg <- paste0(
     cli::col_green(cli::symbol$info),
     ' ',
-    'ccdR will no longer be maintained and its functionality will be replaced by the package `ctxR`. Please refer to that package on CRAN at :',
+    cli::col_blue('ccdR'), ' will no longer be maintained and its functionality will be replaced by the package ', cli::col_blue('ctxR'), '. Please refer to that package on CRAN at: ',
     cli::col_blue(cli::style_italic(
       cli::style_hyperlink('<https://CRAN.R-project.org/package=ctxR>', '<https://CRAN.R-project.org/package=ctxR>')
     ))
