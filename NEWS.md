@@ -1,5 +1,6 @@
 # ccdR 1.1.0
 
+* `ccdR` will no longer be actively maintained. Users are encouraged to use `ctxR` which will be actively maintained and developed further beyond the point where `ccdR` currently remains.
 ## Breaking changes
 
 * Currently no reverse dependencies and no breaking changes.
