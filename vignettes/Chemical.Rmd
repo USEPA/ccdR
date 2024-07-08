@@ -334,7 +334,7 @@ ccl4_phys_chem[propertyId == 'melting-point', .(Mean = mean(value)),
 
 These results tell us about some of the reported physico-chemical properties of the data sets.
 
-The mean "boiling-point" is 251.1072 degrees Celsius for CCL4, with mean values of 250.5943 and 251.4001 for experimental and predicted, respectively. The mean "melting-point" is 33.93924 degrees Celsius for CCL4, with mean values of 23.18876 and 47.98422 for experimental and predicted, respectively.
+The mean "boiling-point" is 252.6593 degrees Celsius for CCL4, with mean values of 250.5943 and 253.8196 for experimental and predicted, respectively. The mean "melting-point" is 34.91613 degrees Celsius for CCL4, with mean values of 23.18876 and 49.99417 for experimental and predicted, respectively.
 
 To explore **all** the values of the physico-chemical properties and calculate their means, we can do the following procedure. First we look at all the physico-chemical properties individually, then group them by each property ("boiling-point", "melting-point", etc...), and then additionally group those by property type ("experimental" vs "predicted"). In the grouping, we look at the columns `value`, `unit`, `propertyID` and `propType`. We also demonstrate how take the mean of the values for each grouping.
 
