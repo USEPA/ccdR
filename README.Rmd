@@ -23,6 +23,8 @@ knitr::opts_chunk$set(
 The goal of ccdR is to provide R users a set of functions to access the [CTX APIs](https://www.epa.gov/comptox-tools/computational-toxicology-and-exposure-apis)
 without requiring extensive experience interacting directly with APIs.
 
+The ccdR package will no longer be actively maintained. The package ctxR will continue providing access to the CTX APIs and be maintained moving forward. Please refer to the CRAN page for [ctxR](https://CRAN.R-project.org/package=ctxR) for a stable version and [ctxR GitHub](https://github.com/USEPA/ctxR/) for the development version.
+
 ## Installation
 
 You can install the development version of ccdR like so:
