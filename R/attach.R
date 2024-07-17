@@ -5,17 +5,26 @@
     ' ',
     "CCTE's Terms of Service: ",
     cli::col_blue(cli::style_italic(
-      cli::style_hyperlink('<https://api-ccte.epa.gov/docs/>', 'https://api-ccte.epa.gov/docs/')
+      cli::style_hyperlink('<https://www.epa.gov/comptox-tools/computational-toxicology-and-exposure-apis>', 'https://www.epa.gov/comptox-tools/computational-toxicology-and-exposure-apis')
     ))
   )
   cite <- paste0(
     cli::col_green(cli::symbol$info),
     ' ',
-    'Please cite ', cli::col_blue('ccdr'), ' if you use it! Use `citation(\'ccdr\')` for details.'
+    'Please cite ', cli::col_blue('ccdR'), ' if you use it! Use `citation(\'ccdR\')` for details.'
+  )
+
+  msg <- paste0(
+    cli::col_green(cli::symbol$info),
+    ' ',
+    cli::col_blue('ccdR'), ' will no longer be maintained and its functionality will be replaced by the package ', cli::col_blue('ctxR'), '. Please refer to that package on CRAN at: ',
+    cli::col_blue(cli::style_italic(
+      cli::style_hyperlink('<https://CRAN.R-project.org/package=ctxR>', 'https://CRAN.R-project.org/package=ctxR')
+    ))
   )
 
   rlang::inform(
-    paste0(tos, '\n', cite),
+    paste0(tos, '\n', cite, '\n', msg),
     class = 'packageStartupMessage'
   )
 
@@ -24,14 +33,19 @@
 
 }
 
+.onLoad <- function(...) {
+  .getKeyIntoPkgEnv(silent = TRUE)
+  bootstrap_ccdr()
+}
+
 
 bootstrap_ccdr <- function() {
   set_ccdr_option(
-    'ccte' = structure(
+    'ctx' = structure(
       list(
 
     ),
-    class = 'ccte_credentials'
+    class = 'ctx_credentials'
   ),
   'display_api_key' = FALSE
   )
@@ -63,7 +77,7 @@ bootstrap_ccdr <- function() {
     } else {
       if (!silent) packageStartupMessage("API key file found but no api entry.")
     }
-  } else if ((ev <- Sys.getenv("CCTE_API_KEY")) != "") {
+  } else if ((ev <- Sys.getenv("CTX_API_KEY")) != "") {
     .pkgenv[["api"]] <- ev
     if (!silent) packageStartupMessage("Setting API key from environment variable.")
   } else {
